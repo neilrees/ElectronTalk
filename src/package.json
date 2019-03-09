@@ -1,0 +1,11 @@
+{
+  "name": "electron-demo",
+  "productName": "electron-demo",
+  "description": "Dev Forum Electron Demo",
+  "version": "0.0.1",
+  "license": "UNLICENCED",
+  "main": "./main.js",
+  "devDependencies": {
+    "electron": "^3.0.9"
+  }
+}

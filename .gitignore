@@ -1,1 +1,9 @@
-
+.idea/
+.cache/
+obj/
+bin/
+dist/
+node_modules/
+*-win32-x64/
+package-lock.json
+yarn.lock

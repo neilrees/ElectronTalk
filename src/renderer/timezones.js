@@ -1,3 +1,4 @@
+const version =  require('../package.json').version;
 const root = 'http://localhost:5000';
 
 function ajax(method, url, callback) {
@@ -38,3 +39,8 @@ function getTimezones() {
         }
     });
 }
+
+(function displayVersion() {
+    const versionSpan = document.getElementById("version");
+    versionSpan.innerText = version;
+})();

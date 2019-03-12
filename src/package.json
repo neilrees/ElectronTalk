@@ -9,6 +9,10 @@
     "electron": "^3.0.9",
     "electron-builder": "^20.38.5"
   },
+  "dependencies": {
+    "electron-log": "^3.0.1",
+    "electron-updater": "^4.0.6"
+  },
   "scripts": {
     "build": "electron-builder --windows --publish always"
   },
@@ -16,6 +20,10 @@
     "appId": "electron-demo",
     "files": [
     ],
+    "publish": {
+      "provider": "s3",
+      "bucket": "electronchicagodemo"
+    },
     "extraResources": [
       {
         "from": "./resources",

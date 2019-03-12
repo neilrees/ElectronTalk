@@ -17,6 +17,13 @@
     "files": [
     ],
     "extraResources": [
+      {
+        "from": "./resources",
+        "to": ".",
+        "filter": [
+          "*.*"
+        ]
+      }
     ],
     "win": {
       "target": [

@@ -6,6 +6,31 @@
   "license": "UNLICENCED",
   "main": "./main.js",
   "devDependencies": {
-    "electron": "^3.0.9"
+    "electron": "^3.0.9",
+    "electron-builder": "^20.38.5"
+  },
+  "scripts": {
+    "build": "electron-builder --windows --publish always"
+  },
+  "build": {
+    "appId": "electron-demo",
+    "files": [
+    ],
+    "extraResources": [
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/milliman.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": "true"
+    },
+    "directories": {
+      "output": "dist/installer/"
+    }
   }
 }

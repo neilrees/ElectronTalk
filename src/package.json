@@ -14,7 +14,9 @@
     "electron-updater": "^4.0.6"
   },
   "scripts": {
-    "build": "electron-builder --windows --publish always"
+    "build": "electron-builder --windows --linux --publish always",
+    "build:windows": "electron-builder --windows --publish always",
+    "build:linux": "electron-builder --linux --publish always"
   },
   "build": {
     "appId": "electron-demo",
@@ -39,13 +41,20 @@
       ],
       "icon": "assets/milliman.ico"
     },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "synopsis": "Dev Forum Electron Demo",
+      "category": "Development"
+    },
     "nsis": {
       "oneClick": true,
       "perMachine": false,
       "allowElevation": "true"
     },
     "directories": {
-      "output": "dist/installer/"
+      "output": "/tmp/dist/installer/"
     }
   }
 }
